@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GamerZone E-Sports Center</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<!-- precarga de la imagen de respaldo: algo se ve desde el primer instante -->
+<link rel="preload" href="gamerzone-poster.webp" as="image">
+<script type="module" src="gz-logo.js?v=5"></script>
+<style>
+  :root {
+    --bg: #070a12;
+    --bg-2: #0c1220;
+    --cyan: #3ff2f2;
+    --text: #e8f4f8;
+    --muted: #8a9bb0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { background: var(--bg); }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Inter, system-ui, sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* ---------- contenido después de la animación ---------- */
+  .content { position: relative; padding: 18vh 16px 14vh; background: linear-gradient(var(--bg), var(--bg-2)); }
+  .content__inner { max-width: 1080px; margin: 0 auto; }
+  .content h2 {
+    font: 800 clamp(2rem, 5vw, 3.2rem)/1.05 Oxanium, sans-serif; text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  .content h2 span { color: var(--cyan); }
+  .content p.lead { color: var(--muted); max-width: 560px; line-height: 1.6; margin-bottom: 3rem; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card {
+    border: 1px solid rgba(63, 242, 242, .18); border-radius: 14px; padding: 28px 24px;
+    background: rgba(255,255,255,.02);
+  }
+  .card h3 { font: 700 1.15rem/1.2 Oxanium, sans-serif; margin-bottom: .6rem; text-transform: uppercase; letter-spacing: .04em; }
+  .card p { color: var(--muted); line-height: 1.55; font-size: .95rem; }
+</style>
+</head>
+<body>
+
+<!-- El logo 3D con scroll. Los subtítulos son opcionales (sin ellos usa los de siempre). -->
+<gamerzone-logo scroll-length="250vh">
+  <p data-from="0" data-to="0.24" data-kicker="Bienvenido">Entra a la zona</p>
+  <p data-from="0.3" data-to="0.66" data-kicker="Compite · Juega · Gana">Arma tu equipo</p>
+  <p data-from="0.74" data-to="1.01" data-kicker="E-Sports Center">GamerZone</p>
+</gamerzone-logo>
+
+<section class="content">
+  <div class="content__inner">
+    <h2>Tu centro de <span>e-sports</span></h2>
+    <p class="lead">Edita este bloque con la información del local: servicios, horarios, torneos y contacto.</p>
+    <div class="cards">
+      <div class="card"><h3>Torneos</h3><p>Competencias semanales con premios para jugadores de todos los niveles.</p></div>
+      <div class="card"><h3>Equipos de alto nivel</h3><p>PCs gamer y consolas de última generación listas para jugar.</p></div>
+      <div class="card"><h3>Comunidad</h3><p>Un espacio para entrenar, conocer a otros jugadores y armar tu equipo.</p></div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
